@@ -26,4 +26,5 @@ COPY --from=builder /zopfli-zopfli-1.0.1/zopfli /usr/bin/zopfli
 
 VOLUME /app
 
-RUN apk add --no-cache git
+# Need CC toolchain for things like libsass :'(
+RUN apk add --no-cache git build-base python

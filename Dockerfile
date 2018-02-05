@@ -26,5 +26,5 @@ COPY --from=builder /zopfli-zopfli-1.0.1/zopfli /usr/bin/zopfli
 
 VOLUME /app
 
-# Need CC toolchain for things like libsass :'(
-RUN apk add --no-cache git build-base python
+# Need CC toolchain for things like libsass and image conversion tools :'(
+RUN apk add --no-cache git build-base python zlib-dev autoconf automake
